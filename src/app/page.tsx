@@ -1,6 +1,7 @@
-
+// 1. Importar o componente Link do Next.js
 import { FaCog, FaUser } from 'react-icons/fa';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
@@ -10,10 +11,10 @@ export default function HomePage() {
       {/* 1. HEADER (Cabeçalho) */}
       <header className="app-header">
         
-        {/* efeito de flutuar */}
-        <button className="interactive-element">
+        {/* 2. Substituir a tag <button> pela tag <Link> */}
+        <Link href="/configuracoes" className="interactive-element">
           <FaCog size={24} />
-        </button>
+        </Link>
 
         <h1>INICIO</h1>
 
