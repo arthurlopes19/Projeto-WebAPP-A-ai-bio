@@ -1,26 +1,88 @@
-@import "tailwindcss";
-
+/* --- Variáveis de Cor  --- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cor-principal: #7c3aed; /* Roxo */
+  --cor-texto-principal: #ffffff; /* Branco */
+  --cor-fundo-app: #ffffff; /* Fundo branco para o conteúdo */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* --- Estilo Base do Body --- */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0; /* Remove a margem padrão do navegador */
+  padding: 0; /* Remove o padding padrão */
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0; /* Um cinza claro para o fundo da página inteira */
+}
+
+/* --- Container Principal do Aplicativo --- */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Organiza os itens em uma coluna (header, main, footer) */
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  background-color: var(--cor-fundo-app);
+}
+
+/* --- Cabeçalho (Header) --- */
+.app-header {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui os itens (ícone, título, avatar) */
+  padding: 1rem; /* 16px de espaçamento interno */
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-principal);
+}
+
+.app-header h1 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0; /* Remove margem do título */
+}
+
+.app-header img {
+  border-radius: 50%; /* Deixa a imagem do avatar redonda */
+}
+
+/* --- Conteúdo Principal (Main) --- */
+.app-main {
+  flex-grow: 1; /* Faz esta seção crescer e ocupar todo o espaço disponível */
+  padding: 1rem;
+}
+
+/* --- Rodapé (Footer) --- */
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem; /* 8px */
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-principal);
+}
+
+.footer-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem; /* 12px */
+  background: none;
+  border: none;
+  color: inherit; /* Herda a cor do texto do footer */
+  cursor: pointer;
+}
+
+.footer-button span {
+  margin-top: 4px;
+}
+
+/* --- Efeito de Flutuar para Ícones e Botões Interativos --- */
+.interactive-element {
+  transition: transform 0.2s ease-in-out; /* Animação suave */
+  background: none; /* Remove fundo padrão do botão */
+  border: none; /* Remove borda padrão */
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.interactive-element:hover {
+  transform: translateY(-4px); /* Move o elemento 4px para cima */
 }
