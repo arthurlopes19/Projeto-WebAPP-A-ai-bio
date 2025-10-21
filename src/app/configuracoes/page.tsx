@@ -30,10 +30,11 @@ export default function ConfiguracoesPage() {
       <main className="app-main">
         <div className="settings-menu">
           
-          <button className="settings-button interactive-element">
+          {/*  links */}
+          <Link href="/perfil" className="settings-button interactive-element">
             <FaCog size={20} />
             <span>Editar Perfil</span>
-          </button>
+          </Link>
 
           <button className="settings-button interactive-element">
             <FaFileContract size={20} />
@@ -53,7 +54,7 @@ export default function ConfiguracoesPage() {
         </div>
       </main>
 
-      {/* Esta página não tem footer */}
+      {/* sem footer */}
 
     </div>
   );

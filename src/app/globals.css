@@ -1,8 +1,9 @@
-/* --- Variáveis de Cor  --- */
+/* --- Variáveis de Cor --- */
 :root {
   --cor-principal: #7c3aed; /* Roxo */
   --cor-texto-principal: #ffffff; /* Branco */
   --cor-fundo-app: #ffffff; /* Fundo branco para o conteúdo */
+  --cor-sucesso: #10B981; /* Verde para o botão */
 }
 
 /* --- Estilo Base do Body --- */
@@ -109,8 +110,85 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra sutil */
   cursor: pointer;
   text-align: left; /* Alinha o texto à esquerda */
+  
+  /* --- botao config --- */
+  text-decoration: none; /* Remove o sublinhado do link */
+  box-sizing: border-box; /* Garante tamanho consistente entre <button> e <a> */
 }
 
 .settings-button svg {
   margin-right: 1rem; /* Espaço entre o ícone e o texto */
+}
+/* --- Estilos da Página de Perfil --- */
+
+.profile-picture-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; /* 32px de espaço abaixo da foto */
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px; /* Bordas levemente arredondadas */
+  object-fit: cover; /* Garante que a imagem preencha o espaço */
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* 24px de espaço entre os campos do formulário */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px de espaço entre o rótulo e o campo */
+}
+
+.form-label {
+  font-size: 1rem; /* 16px */
+  font-weight: 500;
+  color: #333;
+}
+
+.form-input {
+  padding: 0.75rem 1rem; /* 12px vertical, 16px horizontal */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+  background-color: #f7f7f7; /* Fundo levemente cinza */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  outline: none; /* Remove a borda azul padrão do navegador */
+  border-color: var(--cor-principal); /* Borda roxa ao focar */
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); /* "Brilho" roxo suave */
+}
+
+/* ---  "ALTERAR SENHA" --- */
+.change-password-link {
+  align-self: flex-end; /* Alinha o botão à direita */
+  font-size: 0.875rem; /* 14px */
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+
+  /* --- bordas alterar senha--- */
+  background-color: var(--cor-sucesso); /* Fundo verde */
+  color: var(--cor-texto-principal);    /* Texto branco */
+  font-weight: 600;                     /* Letras mais grossas */
+  padding: 0.5rem 1rem;                 /* Espaçamento interno (padding) */
+  border-radius: 8px;                   /* Bordas arredondadas */
+  transition: filter 0.2s ease-in-out;   /* Animação para o hover */
+  
+
+}
+
+.change-password-link:hover {
+  text-decoration: none;     /* Garante que não tenha sublinhado no hover */
+  filter: brightness(90%);   /* Efeito de escurecer levemente ao passar o mouse */
 }

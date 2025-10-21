@@ -4,10 +4,18 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
+        // Este é o que já tínhamos para o avatar
         protocol: 'https',
         hostname: 'i.pravatar.cc',
         port: '',
-        pathname: '/**', // Permite qualquer caminho de imagem nesse domínio
+        pathname: '/**',
+      },
+      // --- ADICIONE ESTE NOVO BLOCO ---
+      {
+        protocol: 'https',
+        hostname: 'cdna.artstation.com', // O novo domínio
+        port: '',
+        pathname: '/**',
       },
     ],
   },
