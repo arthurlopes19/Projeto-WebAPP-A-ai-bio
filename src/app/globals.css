@@ -192,3 +192,254 @@ body {
   text-decoration: none;     /* Garante que não tenha sublinhado no hover */
   filter: brightness(90%);   /* Efeito de escurecer levemente ao passar o mouse */
 }
+/* --- Estilos da Home Page (Açaí Bio) --- */
+
+.welcome-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Botão Roxo Grande */
+.cta-button {
+  background: linear-gradient(90deg, #ba55d3 0%, #9932cc 100%); /* Gradiente Roxo */
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  margin-bottom: 1.5rem;
+}
+
+/* Cartão Verde de Benefícios */
+.benefits-card {
+  background-color: #bef2d6; /* Verde claro */
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.benefits-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas */
+  gap: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #444;
+  line-height: 1.2;
+}
+
+/* Seção de Tipos de Açaí */
+.types-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.types-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 48%;
+}
+
+.type-image {
+  border-radius: 50px 50px 20px 20px; /* Formato arredondado em cima */
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border: 2px solid #ddd;
+}
+
+.type-label {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha a seta à direita */
+  width: 100%;
+}
+/* ... Mantenha todo o seu código anterior acima ... */
+
+/* --- RESPONSIVIDADE PARA PC (Telas maiores que 768px) --- */
+@media (min-width: 768px) {
+  
+  /* 1. Limitar a largura do conteúdo para não esticar demais */
+  .app-main {
+    max-width: 1000px; /* Largura máxima do conteúdo no PC */
+    margin: 0 auto; /* Centraliza o conteúdo na tela */
+    width: 100%;
+  }
+
+  /* 2. Aumentar o tamanho das imagens dos açaís */
+  .type-image {
+    width: 300px !important; /* Força a largura de 300px no PC */
+    height: 300px !important; /* Força a altura de 300px no PC */
+    border-radius: 40px 40px 20px 20px; /* Arredondamento maior */
+  }
+
+  /* 3. Ajustar a grade de tipos de açaí */
+  .types-grid {
+    justify-content: center; /* Centraliza os itens */
+    gap: 4rem; /* Mais espaço entre os copos */
+  }
+
+  .type-label {
+    font-size: 1.2rem; /* Texto da etiqueta maior */
+    margin-top: 1rem;
+  }
+
+  /* 4. Aumentar os textos e títulos */
+  .welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .benefits-title, .types-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 5. Melhorar o Cartão de Benefícios */
+  .benefits-card {
+    padding: 2.5rem;
+  }
+  
+  .benefit-item {
+    font-size: 1.1rem; /* Aumenta o texto dos benefícios */
+  }
+
+  .benefit-item svg {
+    width: 40px; /* Aumenta os ícones (raio, coração, etc) */
+    height: 40px;
+  }
+
+  /* 6. Aumentar o Logo no Header */
+  .app-header img[alt="Logo Açaí Bio"] {
+    width: 180px !important; /* Logo maior no PC */
+    height: auto !important;
+  }
+}
+/* --- Página de Curiosidades --- */
+
+.curiosidade-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Cartão Azul */
+.curiosity-card {
+  background-color: #6380f9; /* Azul similar ao da imagem */
+  color: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start; /* Alinha ícone e texto no topo */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(99, 128, 249, 0.3);
+}
+
+.curiosity-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Imagens Lado a Lado */
+.images-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-image-small {
+  width: 48%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Seção Sobre a Árvore */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.tree-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.tree-text-col {
+  flex: 1;
+}
+
+.tree-image-col img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Lista de Identificação */
+.id-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.id-list li {
+  margin-bottom: 0.5rem;
+}
