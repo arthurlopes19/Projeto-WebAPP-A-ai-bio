@@ -82,7 +82,7 @@ export default function HomePage() {
             {/* IMAGEM 1: Estilo SP */}
             <div className="type-card interactive-element">
                 <Image 
-                    src="https://images.unsplash.com/photo-1598335625203-53558701770e?auto=format&fit=crop&w=600&q=80" 
+                    src="/img/sorvete_copo.png" 
                     alt="Copo de açaí estilo sorvete com leite e granola" 
                     width={120} 
                     height={120} 
@@ -95,7 +95,7 @@ export default function HomePage() {
             {/* IMAGEM 2: Estilo Pará */}
             <div className="type-card interactive-element">
                 <Image 
-                    src="https://plus.unsplash.com/premium_photo-1723865873874-485837478993?auto=format&fit=crop&w=600&q=80" 
+                    src="/img/tradicional.png" 
                     alt="Tigela de açaí tradicional originário do Pará" 
                     width={120} 
                     height={120} 
