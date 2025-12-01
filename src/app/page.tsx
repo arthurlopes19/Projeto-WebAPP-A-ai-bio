@@ -17,7 +17,7 @@ export default function HomePage() {
         {/* Logo Central */}
         <div className="interactive-element">
              <Image 
-              src="https://placehold.co/100x40/white/purple?text=ACAI+BIO" 
+              src="/img/logo.png" 
               alt="Logo Açaí Bio" 
               width={100} 
               height={40} 
